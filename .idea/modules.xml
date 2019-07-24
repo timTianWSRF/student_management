@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AppData/Local/Programs/Python/Python37-32/NomalTest/.idea/NomalTest.iml" filepath="$PROJECT_DIR$/../AppData/Local/Programs/Python/Python37-32/NomalTest/.idea/NomalTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/student_house.iml" filepath="$PROJECT_DIR$/.idea/student_house.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../typeidea/.idea/typeidea.iml" filepath="$PROJECT_DIR$/../typeidea/.idea/typeidea.iml" />
+    </modules>
+  </component>
+</project>
