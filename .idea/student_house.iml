@@ -6,6 +6,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="typeidea" />
     <orderEntry type="module" module-name="NomalTest" />
+    <orderEntry type="module" module-name="mysite" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="Twisted Trial" />

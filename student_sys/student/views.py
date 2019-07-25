@@ -22,4 +22,8 @@ def index(request):
     }
     return render(request, 'index.html', context=context)
 
+
+def test(request):
+    return render(request, 'test.html', {'document_root': '/student/static'})
+
 # Create your views here.
