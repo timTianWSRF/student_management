@@ -15,16 +15,20 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.conf.urls import url
+from django.conf.urls import url, include
 from student.views import index
-from student.views import test
+from student.views import test,test2,upload_file
 from django.views.static import serve
 from . import settings
 
+
+app_name = 'student'
 urlpatterns = [
     url(r'test/', test, name='test'),
     url(r'^$', index, name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^staticfiles/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
+    url(r'test2/', test2),
+    url(r'^uploadFile/$', upload_file)
 ]
 
