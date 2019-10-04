@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/staticfiles/css/style.css">
         <title>学员管理系统</title>
     </head>
     <body>
-        <h3><a href="/admin/"></a></h3>
+        <h3><a href="/admin/">前往教师后台管理页面</a></h3><hr/>
+        <li>作业公布栏</li>
+        <ul>
+            {% for home in homeworks %}
+                <li>{{ home.hw }}</li>
+            {% endfor %}
+        </ul><hr/>
+        <b class="abc abd">学生分数查询表</b>
         <ul>
             {% for student in students %}
                 <li>{{ student.name }} - {{ student.score }}</li>
             {% endfor %}
         </ul>
         <hr/>
-        <!--<form action="/" method="POST">-->
-            <!--{%  csrf_token %}-->
-            <!--<input type="submit" value="Submit" />-->
-        <!--</form>-->
+        <b class="abc abd mid">作业提交处</b>
         <form enctype="multipart/form-data" action="/uploadFile/" method="POST">
             {% csrf_token %}
             {{ form }}

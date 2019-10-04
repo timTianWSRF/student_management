@@ -1,12 +1,14 @@
 .abc{
-    color: red;
+    color:red;
 }
     
-.def{
-    font-size:50px;
-}
+
 
 [href]
 {
     color:orange;
+}
+
+.abd{
+    font-size:40px;
 }

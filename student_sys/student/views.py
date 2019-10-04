@@ -5,10 +5,12 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from .forms import StudentForm
 from .models import Student
+from homework.models import Homework
 from django.urls import reverse
 
 
 def index(request):
+    homeworks = Homework.get_all()
     students = Student.get_all()
     if request.method == 'POST':
         form = StudentForm(request.POST)
@@ -19,6 +21,7 @@ def index(request):
         form = StudentForm()
 
     context = {
+        'homeworks': homeworks,
         'students': students,
         'form': form,
     }
@@ -34,6 +37,7 @@ def test2(request):
 
 
 def upload_file(request):
+    homeworks = Homework.get_all()
     students = Student.get_all()
 
     if request.method == "POST":    # 请求方法为POST时，进行处理
@@ -53,6 +57,7 @@ def upload_file(request):
             form = StudentForm()
 
         context = {
+            'homeworks': homeworks,
             'students': students,
             'form': form,
         }
